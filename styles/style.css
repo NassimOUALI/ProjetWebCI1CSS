@@ -7,6 +7,10 @@
 	--info-color: #3daeff;
 }
 
+body{
+	overflow-y: hidden;
+}
+
 #CTA {
 	padding: 10px;
 	font-size: 30px;
@@ -97,7 +101,12 @@ div#hero div{
 	width: 50%;
 }
 
+div#hero img{
+	min-width: 300px;
+}
+
 nav > div > ul{
+	padding: 0;
 	list-style: none;
 	display: flex;
 }
@@ -468,13 +477,18 @@ h2{
 		text-align: center;
 	}
 
-	
 
-	h1{
-		font-size: 4ex;
+	div#hero > div{
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	div#hero > div{
+		margin: 0%;
+		padding: 0%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

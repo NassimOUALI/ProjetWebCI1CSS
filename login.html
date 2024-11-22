@@ -16,19 +16,11 @@
         </a>
       </div>
       <div>
-        <ul>
+        <ul id="navigation">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./courses.html">Courses</a></li>
-          <li><a href="./joinus.html">Enroll</a></li>
           <li><a href="./forum.html">Chat</a></li>
-          <li>
-            <button class="primary log"><a href="#">Login</a></button>
-          </li>
-          <li>
-            <button class="secondary log">
-              <a href="./joinus.html">Join-us</a>
-            </button>
-          </li>
+          
         </ul>
       </div>
     </nav>
@@ -36,9 +28,9 @@
     <section class="login-content">
       <h1>Welcome Back!</h1>
       <p>Log in to continue your learning journey with BrightPath.</p>
-      <form class="login-form">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
+      <form class="login-form" id="login-form">
+        <label for="username">Username</label>
+        <input type="username" id="username" name="username" required />
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required />
@@ -59,4 +51,5 @@
       </div>
     </footer>
   </body>
+  <script src="./JS/login_logout_handler.js"></script>
 </html>

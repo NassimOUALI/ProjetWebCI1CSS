@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/profile.css">
+  <title>User Profile - BrightPath</title>
+</head>
+<body>
+  <nav>
+    <div id="logo">
+      <a href="#">
+        <img src="./public/LOGO-removebg-preview.png" width="200px" alt="BrightPath Logo">
+      </a>
+    </div>
+    <div>
+      <ul id="navigation">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./courses.html">Courses</a></li>
+        <li><a href="./forum.html">Chat</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="profile" class="section">
+    <div class="profile-header">
+      <div class="profile-picture">
+        <img src="./public/user.jpg" alt="User Photo">
+      </div>
+      <div class="profile-info">
+        <h1 id="profile-name">John Doe</h1> <!-- Dynamic username insertion -->
+        <p id="connected-time">Been connected for: calculating...</p> <!-- Dynamic connected time -->
+        <button class="primary">Edit Profile</button>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <h2>Your Enrolled Courses</h2>
+      <div class="courses-container">
+        <div class="course-card">
+          <img src="./public/course1.jpg" alt="Course 1">
+          <h3>Web Development</h3>
+          <p>Status: In Progress</p>
+          <button class="secondary">Go to Course</button>
+        </div>
+        <div class="course-card">
+          <img src="./public/course2.jpg" alt="Course 2">
+          <h3>Data Science</h3>
+          <p>Status: Completed</p>
+          <button class="secondary">View Certificate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 BrightPath. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+	<script src="./JS/login_logout_handler.js"></script>
+  <script src="./JS/profile.js"></script>
+</body>
+</html>

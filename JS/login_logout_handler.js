@@ -1,13 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Function to get a specific cookie value by name
-  function getCookie(name) {
-    const cookies = document.cookie.split("; ");
-    for (let cookie of cookies) {
-      const [key, value] = cookie.split("=");
-      if (key === name) return decodeURIComponent(value);
-    }
-    return null;
+// Function to get a specific cookie value by name
+function getCookie(name) {
+  const cookies = document.cookie.split("; ");
+  for (let cookie of cookies) {
+    const [key, value] = cookie.split("=");
+    if (key === name) return decodeURIComponent(value);
   }
+  return null;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
 
   // Function to delete a cookie
   function deleteCookie(name) {
@@ -76,3 +77,28 @@ if (loginForm) {
     login(usernameInput);
   });
 }
+
+const cardEnrollButtons = document.querySelectorAll("div.course-card > button");
+
+cardEnrollButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    let username = getCookie("username");
+    event.preventDefault();
+    window.location.href = username ? './profile.html' : './login.html';
+  });
+});
+
+let header = document.querySelector('nav');
+
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 100) {
+		header.style.backgroundColor = '#fff1e6';
+    header.style.borderBottom = '#000 SOLID 1px';
+    header.style.boxShadow = '1px 1px 2px rgba(0, 0, 0, .3)'
+	} else {
+    header.style.boxShadow = '1px 1px 2px rgba(0, 0, 0, .0)'
+    header.style.borderBottom = '#FFF SOLID 0px';
+		header.style.backgroundColor = 'transparent';
+	}
+});
